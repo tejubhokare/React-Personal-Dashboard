@@ -45,6 +45,6 @@ src/
 
 ## Deployment
 
-This application is deployed on the Vercel platform and can be accessed via the following link: [Personal Dashboard](https://react-personal-dashboard-plk0r9pdz-tejubhokares-projects.vercel.app/).
+This application is deployed on the Vercel platform and can be accessed via the following link: [Personal Dashboard](https://react-personal-dashboard.vercel.app/).
 
 ---
