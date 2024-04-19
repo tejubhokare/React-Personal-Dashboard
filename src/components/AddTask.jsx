@@ -1,6 +1,5 @@
-
 import React from 'react';
-import '../Styles/AddTask.css'
+import '../styles/AddTask.css'
 
 function AddTask({ showForm, toggleForm, newTask, handleInputChange, handleFormSubmit, handleCancel }) {
 
@@ -29,9 +28,9 @@ function AddTask({ showForm, toggleForm, newTask, handleInputChange, handleFormS
                             </select>
                         </div>
 
-                        <div className="buttons"> {/* Highlight: Added div for buttons */}
+                        <div className="buttons">
                             <button type="submit">Add Task</button>
-                            <button type="button" onClick={handleCancel}>Cancel</button> {/* Highlight: Added cancel button */}
+                            <button type="button" onClick={handleCancel}>Cancel</button>
                         </div>
                     </form>
                 </div>

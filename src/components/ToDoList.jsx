@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addTask, deleteTask, toggleTask } from '../redux/actions';
-import '../Styles/ToDoList.css';
+import '../styles/ToDoList.css';
 import AddTask from './AddTask';
 
 function ToDoList({ tasks, addTask, deleteTask, toggleTask }) {
@@ -37,7 +37,7 @@ function ToDoList({ tasks, addTask, deleteTask, toggleTask }) {
 
   return (
     <div className="todo-list">
-      <h2>To-Do List</h2>
+      <h2 className='h2'>All Your Tasks</h2>
       <button className="add-task-button" onClick={toggleForm}>
         Add New Task
       </button>
@@ -53,6 +53,7 @@ function ToDoList({ tasks, addTask, deleteTask, toggleTask }) {
         {tasks.map((task, index) => (
           <div key={index} className="task-card">
             <input
+              style={{ marginLeft: '1%', height: '20px', width: '20px' }}
               type="checkbox"
               checked={task.completed}
               onChange={() => {
@@ -61,8 +62,10 @@ function ToDoList({ tasks, addTask, deleteTask, toggleTask }) {
             />
             <div className="task-info">
               <h3>{task.task}</h3>
-              <p>Description: {task.description}</p>
-              <p>Priority: {task.priority}</p>            </div>
+              <p style={{ color: 'green' }}>{task.description}</p>
+
+            </div>
+            <p className='taskp'>Priority: {task.priority}</p>
             <button className="delete-button" onClick={() => handleDeleteTask(index)}>
               Delete
             </button>

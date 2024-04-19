@@ -14,6 +14,8 @@
 .right-container {
   flex: 2;
   width: 67%;
+
+
 }
 
 .profile-container {
@@ -22,20 +24,20 @@
 
 .weather-container {
   padding: 20px;
+  margin-top: -5%;
 }
 
 .task-list {
   padding: 20px;
 }
 
-/* Media query for screens smaller than 768px (typical mobile devices) */
 @media only screen and (max-width: 768px) {
   .app {
-    flex-direction: column; /* Stack containers vertically on small screens */
+    flex-direction: column;
   }
 
   .left-container,
   .right-container {
-    width: 100%; /* Take full width on smaller screens */
+    width: 100%;
   }
 }

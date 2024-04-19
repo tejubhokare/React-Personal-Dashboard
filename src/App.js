@@ -1,17 +1,19 @@
 import './App.css';
-import ToDoList from './Component/ToDoList';
-import UserProfile from './Component/UserProfile';
-import Weather from './Component/Weather';
+import ToDoList from './components/ToDoList';
+import UserProfile from './components/UserProfile';
+import Weather from './components/Weather';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
+
 function App() {
+
   return (
     <Provider store={store}>
       <div className="app">
         <div className="left-container">
           <div className="profile-container">
-            <UserProfile name="John Doe" email="john@example.com" profilePicture="https://via.placeholder.com/150" />
+            <UserProfile name="Tejaswi Bhokare" email="tejaswibhokare@gmail.com" profilePicture='./tejaswi.jpg' />
           </div>
           <div className="weather-container">
             <Weather />
@@ -20,6 +22,7 @@ function App() {
         <div className="right-container">
           <ToDoList />
         </div>
+
       </div>
     </Provider>
   );
