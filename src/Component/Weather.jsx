@@ -39,19 +39,19 @@ function Weather() {
 
     return (
         <div className="weather">
-            <h2>Weather</h2>
+            <h2>Today's Weather</h2>
             {weather ? (
                 <div>
-                    <p>Location: {weather.name}</p>
-                    <p>Temperature: {Math.round(weather.main.temp)}°C</p>
-                    <p>Condition: {weather.weather[0].description}</p>
+                    <p>{weather.name}, {Math.round(weather.main.temp)}°C</p>
+                    {/* <p>{Math.round(weather.main.temp)}°C</p> */}
+                    <p>{weather.weather[0].description}</p>
                 </div>
             ) : (
                 <p>Loading...</p>
             )}
             <form onSubmit={handleSubmit}>
-                <input type="text" value={city} onChange={handleCityChange} placeholder="Enter city" />
-                <button type="submit">Check</button>
+                <input type="text" onChange={handleCityChange} placeholder="Enter city" />
+                <button type="submit">Check Weather</button>
             </form>
         </div>
     );

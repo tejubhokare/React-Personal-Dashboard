@@ -4,6 +4,7 @@ import '../Styles/UserProfile.css'
 
 function UserProfile({ name, email, profilePicture }) {
     return (
+        <>
         <div className="user-profile">
             <img src={profilePicture} alt="Profile" className="profile-picture" />
             <div className="user-details">
@@ -11,6 +12,8 @@ function UserProfile({ name, email, profilePicture }) {
                 <p>{email}</p>
             </div>
         </div>
+        <h>Hi, {name}</h>
+        </>
     );
 }
 
